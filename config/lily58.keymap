@@ -114,11 +114,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans     &trans      &e_grave    &trans                &trans                                          &trans             &trans                 &trans  &trans          &trans     &to 0
-&trans  &trans     &trans      &e_aigu     &trans                &trans                                          &trans             &trans                 &trans  &kp MINUS       &kp EQUAL  &kp PIPE
-&trans  &a_accent  &kp SYSREQ  &trans      &kp LEFT_PARENTHESIS  &trans                                          &trans             &kp RIGHT_PARENTHESIS  &trans  &kp UNDERSCORE  &kp PLUS   &kp BACKSLASH
-&to 2   &kp GRAVE  &kp TILDE   &c_cedille  &kp LEFT_BRACE        &kp LEFT_BRACKET  &trans       &trans           &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &trans          &trans     &trans
-                               &trans      &trans                &kp LC(C)         &kp LC(V)    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans                 &trans
+&trans  &trans     &trans           &e_grave    &trans                &trans                                          &kp RA(CARET)      &trans                 &trans  &trans          &trans     &to 0
+&trans  &trans     &trans           &e_aigu     &trans                &trans                                          &trans             &trans                 &trans  &kp MINUS       &kp EQUAL  &kp PIPE
+&trans  &a_accent  &kp PRINTSCREEN  &trans      &kp LEFT_PARENTHESIS  &trans                                          &trans             &kp RIGHT_PARENTHESIS  &trans  &kp UNDERSCORE  &kp PLUS   &kp BACKSLASH
+&to 2   &kp GRAVE  &kp TILDE        &c_cedille  &kp LEFT_BRACE        &kp LEFT_BRACKET  &trans       &trans           &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &trans          &trans     &trans
+                                    &trans      &trans                &kp LC(C)         &kp LC(V)    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans                 &trans
             >;
         };
 
@@ -135,17 +135,17 @@
 &none      &kp F11  &kp F12  &none   &none   &none                   &none     &none     &none         &none      &none    &none
 &kp LCTRL  &none    &none    &none   &none   &none                   &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none    &none
 &none      &none    &none    &none   &none   &none   &none    &none  &none     &none     &none         &none      &none    &none
-                             &none   &none   &none   &none    &none  &none     &none     &none
+                             &none   &none   &none   &none    &to 0  &none     &none     &none
             >;
         };
 
         Gaming {
             bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &to 0
-&trans     &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &kp F5  &trans  &kp SPACE  &trans    &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans    &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &to 0
+&trans     &trans  &trans  &trans    &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &trans  &trans  &trans    &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans    &trans  &trans     &trans    &kp F5  &trans  &trans  &trans  &trans  &trans  &trans
+                           &kp LALT  &trans  &kp SPACE  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
