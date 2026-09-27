@@ -79,37 +79,37 @@
         bluetooth1 {
             bindings = <&bt_linux>;
             key-positions = <42 1>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
 
         bluetooth2 {
             bindings = <&bt_mac1>;
             key-positions = <42 2>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
 
         bluetooth3 {
             bindings = <&bt_mac2>;
             key-positions = <42 3>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
 
         bluetooth4 {
             bindings = <&bt BT_SEL 3>;
             key-positions = <42 4>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
 
         bluetooth5 {
             bindings = <&bt BT_SEL 4>;
             key-positions = <42 5>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
 
         bluetooth_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <42 23>;
-            layers = <0 2>;
+            layers = <0 5>;
         };
     };
 
@@ -202,7 +202,7 @@
 &trans  &trans     &trans          &e_grave     &trans                &trans                                          &kp RA(I)          &trans                 &trans  &trans          &trans     &to 5
 &trans  &trans     &trans          &mac_e_aigu  &trans                &trans                                          &trans             &trans                 &trans  &kp MINUS       &kp EQUAL  &kp PIPE
 &trans  &a_accent  &kp LS(LG(N5))  &trans       &kp LEFT_PARENTHESIS  &trans                                          &trans             &kp RIGHT_PARENTHESIS  &trans  &kp UNDERSCORE  &kp PLUS   &kp BACKSLASH
-&to 2   &kp GRAVE  &kp TILDE       &kp RA(C)    &kp LEFT_BRACE        &kp LEFT_BRACKET  &trans       &trans           &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &trans          &trans     &trans
+&to 7   &kp GRAVE  &kp TILDE       &kp RA(C)    &kp LEFT_BRACE        &kp LEFT_BRACKET  &trans       &trans           &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &trans          &trans     &trans
                                    &trans       &trans                &kp LG(C)         &kp LG(V)    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans                 &trans
             >;
         };
