@@ -37,6 +37,34 @@
             bindings = <&kp RA(GRAVE) &kp E>;
             label = "è";
         };
+
+        bt_linux: bt_linux {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "BT_LINUX";
+        };
+
+        bt_mac1: bt_mac1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 5>;
+            label = "BT_MAC1";
+        };
+
+        bt_mac2: bt_mac2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to 5>;
+            label = "BT_MAC2";
+        };
+
+        mac_e_aigu: mac_e_aigu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(E) &kp E>;
+            label = "MAC_E_AIGU";
+        };
     };
 
     combos {
@@ -49,19 +77,19 @@
         };
 
         bluetooth1 {
-            bindings = <&bt BT_SEL 0>;
+            bindings = <&bt_linux>;
             key-positions = <42 1>;
             layers = <0 2>;
         };
 
         bluetooth2 {
-            bindings = <&bt BT_SEL 1>;
+            bindings = <&bt_mac1>;
             key-positions = <42 2>;
             layers = <0 2>;
         };
 
         bluetooth3 {
-            bindings = <&bt BT_SEL 2>;
+            bindings = <&bt_mac2>;
             key-positions = <42 3>;
             layers = <0 2>;
         };
@@ -156,6 +184,36 @@
 &kp LCTRL  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &kp SPACE  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        mac_base {
+            bindings = <
+&trans        &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &mt LC(LG(Q)) BACKSPACE
+&trans        &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&mt LGUI ESC  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &sl 6   &kp LCTRL    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        mac_lower_layer {
+            bindings = <
+&trans  &trans     &trans          &e_grave     &trans                &trans                                          &kp RA(I)          &trans                 &trans  &trans          &trans     &to 5
+&trans  &trans     &trans          &mac_e_aigu  &trans                &trans                                          &trans             &trans                 &trans  &kp MINUS       &kp EQUAL  &kp PIPE
+&trans  &a_accent  &kp LS(LG(N5))  &trans       &kp LEFT_PARENTHESIS  &trans                                          &trans             &kp RIGHT_PARENTHESIS  &trans  &kp UNDERSCORE  &kp PLUS   &kp BACKSLASH
+&to 2   &kp GRAVE  &kp TILDE       &kp RA(C)    &kp LEFT_BRACE        &kp LEFT_BRACKET  &trans       &trans           &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &trans          &trans     &trans
+                                   &trans       &trans                &kp LG(C)         &kp LG(V)    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans                 &trans
+            >;
+        };
+
+        mac_config {
+            bindings = <
+&kp ESC   &none  &none  &none  &none  &none                  &none     &none     &none         &none      &none  &to 5
+&none     &none  &none  &none  &none  &none                  &none     &none     &none         &none      &none  &none
+&kp LALT  &none  &none  &none  &none  &none                  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none  &none
+&none     &none  &none  &none  &none  &none  &none    &none  &none     &none     &none         &none      &none  &none
+                        &none  &none  &none  &none    &to 5  &to 5     &none     &none
             >;
         };
     };
