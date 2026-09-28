@@ -189,11 +189,11 @@
 
         mac_base {
             bindings = <
-&trans        &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &mt LC(LG(Q)) BACKSPACE
-&trans        &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&mt LGUI ESC  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &sl 6   &kp LCTRL    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &mt LC(LG(Q)) BACKSPACE
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &sl 6   &trans    &trans  &trans  &trans  &trans
             >;
         };
 
